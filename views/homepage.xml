@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- Banner -->
+        <template id="import_css" name="Import custom css" inherit_id="website.assets_frontend">
+            <xpath expr="." position="inside">
+                <link href="/web_principal/static/src/css/estilos.css" rel="stylesheet" type="text/css"/>
+                <link href="/web_principal/static/src/css/header.css" rel="stylesheet" type="text/css"/>
+            </xpath>
+        </template>
+        <template inherit_id="website.homepage" id="homepage_inherit">
+            <xpath expr="//div[@id='wrap']" position="replace">
+                <body>
+                    <div class="header">
+                        <div class="jumbotron jumbotron_web_site">
+                            <div class="jumbotron_container">
+                                <h1 class="jumbotron_title text-center">
+                                    <img src="/web_principal/static/src/img/icon-net.png" style="width:80px;"/>
+                                    <br/>
+                                    <strong>
+                                        BIG TALENT PLATFORM
+                                    </strong>
+                                    <br/>
+                                    <strong>
+                                        RED DE VINCULACIÓN DE TALENTOS
+                                    </strong>
+                                </h1>
+                                <p class="small">Plataforma para la búsqueda, formación y reclutamiento de talento que
+                                    las empresas requieren
+                                </p>
+                                <form class="form-inline">
+                                    <div id="espacio_registro" class="btn-register" groups="base.group_public">
+                                        <p>Regístrate como:</p>
+                                        <!--Espacio para agregar botones de registro-->
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="alert text-center bg-gray text-title">
+                        <div class="row text-center">
+                            <div class="col-xs-6 max-width">
+                                <h2>
+                                    <strong>¿Cómo registrarme?</strong>
+                                </h2>
+                                <p class="small"></p>
+                            </div>
+                            <div class="col-xs-2 max-width-icon">
+                                <a data-toggle="modal"
+                                   data-target="#modal_info_empresas">
+                                    <span class="fa fa-building-o logo"/>
+                                </a>
+                                <br/>
+                                <strong>Empresas</strong>
+                            </div>
+                            <div class="col-xs-2 max-width-icon">
+                                <a data-toggle="modal"
+                                   data-target="#modal_info_universidades">
+                                    <span class="fa fa-university logo"/>
+                                </a>
+                                <br/>
+                                <strong>Universidades</strong>
+                            </div>
+                            <div class="col-xs-2 max-width-icon">
+                                <a data-toggle="modal"
+                                   data-target="#modal_info_talentos">
+                                    <span class="fa fa-graduation-cap logo"/>
+                                </a>
+                                <br/>
+                                <strong>Talentos</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container-fluid" style="padding-top:10px;">
+                        <h2 class="text-center text-title">
+                            <strong>Beneficios que ofrecemos</strong>
+                        </h2>
+                        <hr style="border-top:1px solid #7896a9;"/>
+                        <div class="row text-center">
+                            <div class="col-sm-4">
+                                <img src="/web_principal/static/src/img/company.png" class="image-icon"/>
+                                <h3 class="text-title">EMPRESAS</h3>
+                                <p class="text-muted">
+                                    Publicación de vacantes, búsqueda y selección de talentos, reclutamiento de
+                                    personal.
+                                </p>
+                            </div>
+                            <div class="col-sm-4">
+                                <img src="/web_principal/static/src/img/universidad.png" class="image-icon"/>
+                                <h3 class="text-title">UNIVERSIDADES</h3>
+                                <p class="text-muted">
+                                    Convenios con universidades y gestión de alumnos
+                                </p>
+                            </div>
+                            <div class="col-sm-4">
+                                <img src="/web_principal/static/src/img/survey.png" class="image-icon"/>
+                                <h3 class="text-title">EVALUACIONES</h3>
+                                <p class="text-muted">
+                                    Realiza entrevistas y evaluaciones en línea.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row text-center">
+                            <div class="col-sm-4">
+                                <img src="/web_principal/static/src/img/cv.png" class="image-icon"/>
+                                <h3 class="text-title">CREA Y DESCARGA TU CV</h3>
+                                <p class="text-muted">
+                                    Genera tu Curriculum a partir de tu perfil.
+                                </p>
+                            </div>
+                            <div class="col-sm-4">
+                                <img src="/web_principal/static/src/img/student.png" class="image-icon"/>
+                                <h3 class="text-title">ESTADÍAS</h3>
+                                <p class="text-muted">
+                                    Administra el proceso de estadías o prácticas profesionales de tu institución
+                                </p>
+                            </div>
+                            <div class="col-sm-4">
+                                <img src="/web_principal/static/src/img/geo.png" class="image-icon"/>
+                                <h3 class="text-title">GEOLOCALIZA VACANTES</h3>
+                                <p class="text-muted">
+                                    Busca vacantes de empleo y prácticas
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carrusel =======================-->
+                    <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img src="/web_principal/static/src/img/maps.jpg" class="image-center bg-secondary"
+                                     style="width:100%;"/>
+                                <div class="carousel-caption">
+                                    <h3>
+                                        <strong>UBICACIÓN DE TALENTOS</strong>
+                                    </h3>
+                                    <p>Ubica talentos de acuerdo a lo que buscas</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="/web_principal/static/src/img/bussines.jpg" class="image-center"
+                                     style="width:100%;"/>
+                                <div class="carousel-caption">
+                                    <h3>
+                                        <strong>LIBERA TUS ESTADÍAS</strong>
+                                    </h3>
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="/web_principal/static/src/img/select.jpg" class="image-center"
+                                     style="width:100%;"/>
+                                <div class="carousel-caption">
+                                    <h3>
+                                        <strong>CONSIGUE TU PRIMER EMPLEO</strong>
+                                    </h3>
+                                    <p>Alguien está buscando tu talento!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+
+                    <!--
+                    <div class="container-fluid">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 mb32">
+                                    <h1 class="text-center text-title">¿No sabes por dónde comenzar?</h1>
+                                    <h3 class="text-center text-muted">Sigue estos sencillos pasos</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <section class="s_features" style="height: 280px; overflow: hidden;">
+                            <div class="container">
+                                <div class="row mt16 mb16">
+                                    <div class="text-center col-md-3">
+                                        <img src="/web_principal/static/src/img/register.png" alt="img-cregister"
+                                             height="85"/>
+                                        <div>
+                                            <h3 class="mb0 mt8">Registrate</h3>
+                                            <p class="text-muted">Crea tu cuenta gratuita y comienza a buscar la
+                                                oportunidad de crecer.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="text-center col-md-3">
+                                        <img src="/web_principal/static/src/img/curriculum.png" alt="img-curriculum"
+                                             height="85"/>
+                                        <div>
+                                            <h3 class="mt8 mb0">Completa tu perfil</h3>
+                                            <p class="text-muted">Ayuda a las empresas a encontrarte, si aún no tienes
+                                                tu curriculum, nosotros te ayudamos a crearlo a partir de tu perfil.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="text-center col-md-3">
+                                        <img src="/web_principal/static/src/img/hand.png" alt="img-mano_interactive"
+                                             height="85"/>
+                                        <div>
+                                            <h3 class="mt8 mb0">Interactua con la empresas</h3>
+                                            <p class="text-muted">Busca vacantes de tu interés y postulate. Sigue la
+                                                actividad de las empresas y filtra los puestos de acuerdo a tu perfil.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="text-center col-md-3">
+                                        <img src="/web_principal/static/src/img/grafico-de-lineas.svg"
+                                             alt="img-graphic_line" height="85"/>
+                                        <div>
+                                            <h3 class="mb0 mt8">Agiliza tu tiempo</h3>
+                                            <p class="text-muted">No esperes más para conseguir el trabajo que buscas.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>-->
+                    <div class="container-fluid bg-gray text-primary">
+                        <h1 class="text-center text-title">Módulos disponibles</h1>
+                        <div class="row text-center text-muted">
+                            <a data-toggle="modal" data-target="#modal_module_agenda">
+                                <div class="col-sm-1 image-module">
+                                    <img src="/web_principal/static/src/img/modules/agenda.png" class="img-circle"/>
+                                    <div class="centered">Agenda</div>
+                                </div>
+                            </a>
+                            <a data-toggle="modal" data-target="#modal_module_convenios">
+                                <div class="col-sm-1 image-module">
+                                    <img src="/web_principal/static/src/img/modules/convenios.png" class="img-circle"/>
+                                    <div class="centered">Convenios</div>
+                                </div>
+                            </a>
+                            <a data-toggle="modal" data-target="#modal_module_empresas">
+                                <div class="col-sm-1 image-module">
+                                    <img src="/web_principal/static/src/img/modules/empresas.png" class="img-circle"/>
+                                    <div class="centered">Empresas</div>
+                                </div>
+                            </a>
+                            <a data-toggle="modal" data-target="#modal_module_estadias">
+                                <div class="col-sm-1 image-module">
+                                    <img src="/web_principal/static/src/img/modules/estadias.png" class="img-circle"/>
+                                    <div class="centered">Estadías</div>
+                                </div>
+                            </a>
+                            <a data-toggle="modal" data-target="#modal_module_seguidores">
+                                <div class="col-sm-1 image-module">
+                                    <img src="/web_principal/static/src/img/modules/followers.png" class="img-circle"/>
+                                    <div class="centered">Seguidores</div>
+                                </div>
+                            </a>
+                            <a data-toggle="modal" data-target="#modal_module_reclutamiento">
+                                <div class="col-sm-1 image-module">
+                                    <img src="/web_principal/static/src/img/modules/reclutamiento.png"
+                                         class="img-circle"/>
+                                    <div class="centered">Reclutamiento</div>
+                                </div>
+                            </a>
+                            <a data-toggle="modal" data-target="#modal_module_encuestas">
+                                <div class="col-sm-1 image-module">
+                                    <img src="/web_principal/static/src/img/modules/survey.png" class="img-circle"/>
+                                    <div class="centered">Encuestas</div>
+                                </div>
+                            </a>
+                            <a data-toggle="modal" data-target="#modal_module_tablero">
+                                <div class="col-sm-1 image-module">
+                                    <img src="/web_principal/static/src/img/modules/tablero.png" class="img-circle"/>
+                                    <div class="centered">Tablero</div>
+                                </div>
+                            </a>
+                            <a data-toggle="modal" data-target="#modal_module_talentos">
+                                <div class="col-sm-1 image-module">
+                                    <img src="/web_principal/static/src/img/modules/talento.png" class="img-circle"/>
+                                    <div class="centered">Talentos</div>
+                                </div>
+                            </a>
+                            <a data-toggle="modal" data-target="#modal_module_universidades">
+                                <div class="col-sm-1 image-module">
+                                    <img src="/web_principal/static/src/img/modules/universidad.png"
+                                         class="img-circle"/>
+                                    <div class="centered">Universidades</div>
+                                </div>
+                            </a>
+                            <a data-toggle="modal" data-target="#modal_module_vacantes">
+                                <div class="col-sm-1 image-module">
+                                    <img src="/web_principal/static/src/img/modules/vacantes.png" class="img-circle"/>
+                                    <div class="centered">Vacantes</div>
+                                </div>
+                            </a>
+                            <a data-toggle="modal" data-target="#modal_module_mapas">
+                                <div class="col-sm-1 image-module">
+                                    <img src="/web_principal/static/src/img/modules/maps.png" class="img-circle"/>
+                                    <div class="centered">Geolocalización</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="modals_container"></div>
+                    <!--
+                    <div class="text-center">
+                        <h2>Pricing</h2>
+                        <h4>Choose a payment plan that works for you</h4>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="panel panel-default text-center">
+                                <div class="panel-heading">
+                                    <h1>Basic</h1>
+                                </div>
+                                <div class="panel-body">
+                                    <p>
+                                        <strong>20</strong> Lorem
+                                    </p>
+                                    <p>
+                                        <strong>15</strong> Ipsum
+                                    </p>
+                                    <p>
+                                        <strong>5</strong> Dolor
+                                    </p>
+                                    <p>
+                                        <strong>2</strong> Sit
+                                    </p>
+                                    <p>
+                                        <strong>Endless</strong> Amet
+                                    </p>
+                                </div>
+                                <div class="panel-footer">
+                                    <h3>$19</h3>
+                                    <h4>per month</h4>
+                                    <button class="btn btn-lg">Sign Up</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="panel panel-default text-center">
+                                <div class="panel-heading">
+                                    <h1>Pro</h1>
+                                </div>
+                                <div class="panel-body">
+                                    <p>
+                                        <strong>50</strong> Lorem
+                                    </p>
+                                    <p>
+                                        <strong>25</strong> Ipsum
+                                    </p>
+                                    <p>
+                                        <strong>10</strong> Dolor
+                                    </p>
+                                    <p>
+                                        <strong>5</strong> Sit
+                                    </p>
+                                    <p>
+                                        <strong>Endless</strong> Amet
+                                    </p>
+                                </div>
+                                <div class="panel-footer">
+                                    <h3>$29</h3>
+                                    <h4>per month</h4>
+                                    <button class="btn btn-lg">Sign Up</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="panel panel-default text-center">
+                                <div class="panel-heading">
+                                    <h1>Premium</h1>
+                                </div>
+                                <div class="panel-body">
+                                    <p>
+                                        <strong>100</strong> Lorem
+                                    </p>
+                                    <p>
+                                        <strong>50</strong> Ipsum
+                                    </p>
+                                    <p>
+                                        <strong>25</strong> Dolor
+                                    </p>
+                                    <p>
+                                        <strong>10</strong> Sit
+                                    </p>
+                                    <p>
+                                        <strong>Endless</strong> Amet
+                                    </p>
+                                </div>
+                                <div class="panel-footer">
+                                    <h3>$49</h3>
+                                    <h4>per month</h4>
+                                    <button class="btn btn-lg">Sign Up</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    -->
+
+                    <div class="container-fluid panel-heading" style="padding:3px; !important">
+                    </div>
+                </body>
+            </xpath>
+        </template>
+    </data>
+</odoo>

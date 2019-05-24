@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="0">
+        <template inherit_id="web_principal.homepage_inherit" id="homepage_modal_views">
+            <xpath expr="//div[@id='modals_container']" position="inside">
+
+                <div class="modal fade" id="modal_info_empresas" tabindex="-1" role="dialog"
+                     aria-labelledby="modal_info_empresas">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">
+                                        <i class="fa fa-times"></i>
+                                    </span>
+                                </button>
+                                <h4 class="modal-title" id="myModalLabel">Más detalles</h4>
+                            </div>
+                            <div class="modal-body">
+                                El proceso de reclutamiento puede llegar a ser muy extenso e implica tiempo en esperar
+                                respuestas o encontrar a la persona ideal, publica vacantes y administra el proceso de
+                                reclutamiento de tu empresa.
+                            </div>
+                            <div id="modal_empresa_registro" class="modal-footer">
+                                <button type="button" class="btn btn-default btn-lg" data-dismiss="modal">Cerrar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="modal_info_universidades" tabindex="-1" role="dialog"
+                     aria-labelledby="modal_info_universidades">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">
+                                        <i class="fa fa-times"></i>
+                                    </span>
+                                </button>
+                                <h4 class="modal-title" id="myModalLabel">Más detalles</h4>
+                            </div>
+                            <div class="modal-body">
+                                La plataforma ayudará a conectar sus egresados con el mercado laboral, realizando
+                                convenios con empresas para estadías o prácticas profesionales, administra el proceso de
+                                estadías.
+                            </div>
+                            <div id="modal_universidad_registro" class="modal-footer">
+                                <button type="button" class="btn btn-default btn-lg" data-dismiss="modal">Cerrar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="modal_info_talentos" tabindex="-1" role="dialog"
+                     aria-labelledby="modal_info_talentos">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">
+                                        <i class="fa fa-times"></i>
+                                    </span>
+                                </button>
+                                <h4 class="modal-title" id="myModalLabel">Más detalles</h4>
+                            </div>
+                            <div class="modal-body">
+                                Los talentos son todos los estudiantes o egresados que estén buscando nuevas
+                                oportunidades de empleo o prácticas profesionales, busca y postulate a las vacantes que
+                                más se adapten a su perfil, si eres prácticante interactua con la universidad en el
+                                seguimiento de tus estadías.
+                            </div>
+                            <div id="modal_talento_registro" class="modal-footer">
+                                <button type="button" class="btn btn-default btn-lg" data-dismiss="modal">Cerrar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--generate modal for-->
+                <t t-set="modules"
+                   t-value="[['agenda','Agendar reuniones con otros usuarios'],['convenios','Realización de convenios entre universidades y empresas'],['empresas','Registro y consulta del perfil de empresas con mapa de ubicación y datos de contacto'],['estadias','Seguimiento del proceso de estadías, interacción empresa - universidad - alumno, subir formatos de documentos y adjuntar documentos al proceso'],['seguidores','Seguir empresas y recibir notificaciones de nuevas vacantes publicadas'],['reclutamiento','Seguimiento del reclutamiento de empleados realizado por las empresas'],['encuestas','Crea y envía entrevistas, evaluaciones a los postulados'],['tablero','Tablero de acceso rápido de búsquedas guardadas'],['talentos','Registro y consulta de perfiles de estudiantes o egresados'],['universidades','Registro de universidades, información general carreras que ofrece'],['vacantes','Publicación de vacantes de empleo'],['mapas','Geolocalización de empresas, universidades, talentos, vacantes de empleo y estadías'],]"/>
+                <t t-foreach="modules" t-as="module">
+                    <t t-set="id" t-value="module[0]"/>
+                    <div class="modal fade" t-att-id="'modal_module_%s' % id" tabindex="-1" role="dialog"
+                         aria-labelledby="modal_info_agenda">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">
+                                            <i class="fa fa-times"></i>
+                                        </span>
+                                    </button>
+                                    <h4 class="modal-title" id="myModalLabel">Más detalles</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <span t-esc="module[1]"/>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </xpath>
+        </template>
+    </data>
+</odoo>

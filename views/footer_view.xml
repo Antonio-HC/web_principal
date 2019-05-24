@@ -1,0 +1,35 @@
+<odoo>
+    <data>
+        <template inherit_id="website.footer_custom" id="index_footer" name="Big-Talent Oohel Footer">
+            <xpath expr="//div[@id='footer']" position="replace">
+                <div class="container">
+
+                    <br/>
+                    <div class="row">
+                        <div class="col-xs-6 text-right">
+                            <p>
+                                <a href="#">Políticas de privacidad</a>
+                            </p>
+                        </div>
+                        <div class="col-xs-6 text-left">
+                            <p>
+                                <a href="#">Términos y condiciones</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <p class="ot_datos">Cto. Alejandría 2002 1 Villa Carmel, Puebla, Pue. México | (+52)
+                                222-405-8459 - info@oohel.net
+                            </p>
+                        </div>
+                        <div class="col-md-12 text-center">
+                            <p class="ot_derechos">2019. Todos los derechos reservados</p>
+                            <!-- Oohel Technologies SA de CV.  -->
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>
